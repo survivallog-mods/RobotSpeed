@@ -1,0 +1,110 @@
+{
+  "mcSpec": 2,
+  "id": "com.local.survivallog.robotspeed",
+  "display": "机器人提速",
+  "en": "RobotSpeed",
+  "summary": "机器人移速/充电/续航/耗电/动作时长/货舱六维倍率 + 与手动动作对齐。",
+  "usage": {
+    "intro": "修理 / 整理 / 种植三种机器人干活不再慢半拍：动作速度对齐手动操作，移速、充电、续航、货舱默认翻倍，每趟耗电减半。",
+    "sections": [
+      {
+        "heading": "怎么用",
+        "bullets": [
+          "装好即用；每项倍率独立可调，1 = 官方原值",
+          "改动即时写入；已在场的机器人重读一次存档刷新，货舱格数重开机器人面板即见"
+        ]
+      },
+      {
+        "heading": "提示",
+        "bullets": [
+          "工速 / 快充 / 移速等模块加成照常叠加，不会被吞",
+          "机器人专属动作有 0.3 秒下限防动画爆闪；个别与「动作加速」共用的动作两 mod 会自动让位、不互相覆盖",
+          "玩家动作提速看「动作加速」；插槽数量与模块类不在本 mod 范围"
+        ]
+      }
+    ]
+  },
+  "groups": [
+    {
+      "title": "机器人提速",
+      "order": 1,
+      "items": [
+        {
+          "key": "机器人提速:动作速度对齐手动",
+          "label": "动作速度对齐手动",
+          "badge": "now",
+          "type": "bool",
+          "def": true,
+          "order": 10
+        },
+        {
+          "key": "机器人提速:移速倍率",
+          "label": "移速倍率",
+          "badge": "now",
+          "type": "float",
+          "def": 2,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5,
+          "order": 20
+        },
+        {
+          "key": "机器人提速:充电速率倍率",
+          "label": "充电速率倍率",
+          "badge": "now",
+          "type": "float",
+          "def": 2,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5,
+          "order": 30
+        },
+        {
+          "key": "机器人提速:续航倍率",
+          "label": "续航倍率",
+          "badge": "now",
+          "type": "float",
+          "def": 2,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5,
+          "order": 40
+        },
+        {
+          "key": "机器人提速:耗电降低倍率",
+          "label": "耗电降低倍率",
+          "badge": "now",
+          "type": "float",
+          "def": 2,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5,
+          "order": 50
+        },
+        {
+          "key": "机器人提速:动作时长倍率",
+          "label": "动作时长倍率",
+          "badge": "now",
+          "type": "float",
+          "def": 2,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5,
+          "order": 60
+        },
+        {
+          "key": "机器人提速:货舱格数倍率",
+          "label": "货舱格数倍率",
+          "badge": "now",
+          "type": "float",
+          "def": 2,
+          "min": 0.5,
+          "max": 10,
+          "step": 0.5,
+          "order": 70,
+          "note": "面板重开即见"
+        }
+      ]
+    }
+  ]
+}
